@@ -1,0 +1,19 @@
+CC = g++
+OUT = ellanotequiere
+
+SDIR = src
+IDIR = include
+ODIR = obj
+BDIR = bin
+
+SRCS = $(wildcard $(SDIR)/*.cpp)
+OBJS = $(SRCS:$(SDIR)/%.cpp=$(ODIR)/%.o)
+
+$(ODIR)/%.o: $(SDIR)/%.cpp
+	$(CC) -o $@ -I $(IDIR) -c $<
+
+ellanotequiere: $(OBJS)
+	$(CC) -o $(BDIR)/$(OUT) $^
+
+clean: $(OBJS)
+	rm -f $^ $(BDIR)/*
