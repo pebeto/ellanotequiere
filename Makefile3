@@ -1,0 +1,13 @@
+CC = g++
+OUT = ellanotequiere
+
+SDIR = src
+IDIR = include
+ODIR = obj
+BDIR = bin
+
+$(ODIR)/%.o: $(SDIR)/%.cpp
+	$(CC) -o $@ -I $(IDIR) -c $<
+
+ellanotequiere: $(ODIR)/Ella.o $(ODIR)/main.o
+	$(CC) -o $(BDIR)/$(OUT) $(ODIR)/Ella.o $(ODIR)/main.o

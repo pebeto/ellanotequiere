@@ -1,0 +1,7 @@
+CC = g++
+SRCS = src/main.cpp src/Ella.cpp
+IDIR = include
+OUT = bin/ellanotequiere
+
+ellanotequiere: $(SRCS)
+	$(CC) -o $(OUT) $(SRCS) -I $(IDIR)

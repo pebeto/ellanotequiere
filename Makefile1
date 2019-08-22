@@ -1,0 +1,2 @@
+ellanotequiere: src/main.cpp src/Ella.cpp
+	g++ -o bin/ellanotequiere src/main.cpp src/Ella.cpp -I include
