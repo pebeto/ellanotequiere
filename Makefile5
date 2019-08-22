@@ -16,4 +16,4 @@ ellanotequiere: $(OBJS)
 	$(CC) -o $(BDIR)/$(OUT) $^
 
 clean: $(OBJS)
-	rm -f $^ $(BDIR)/*
+	rm -f $^ $(BDIR)/$(OUT)
